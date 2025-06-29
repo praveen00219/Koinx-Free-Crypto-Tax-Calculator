@@ -1,3 +1,8 @@
+import { useState } from "react";
+import { investmentTypeTerm } from "../utils/investTypeTerm";
+import FlagSelect from "./FlagSelect";
+import ISOCertified from "../assets/footerImg.png";
+
 import {
   FaXTwitter,
   FaYoutube,
@@ -6,12 +11,13 @@ import {
   FaTelegram,
   FaFacebook,
 } from "react-icons/fa6";
+
 const Footer = () => {
   return (
-    <footer className="bg-black text-white p-8 mt-8">
-      <div className="max-w-5xl mx-auto flex justify-between items-center px-4">
-        <h2 className="text-lg font-bold">KoinX™</h2>
-        <div className="flex space-x-4 text-blue-400 text-2xl">
+    <footer className="bg-black text-white px-8 pt-10 pb-6 mt-8">
+      <div className="flex justify-between items-center max-w-7xl mx-auto gap-4">
+        <h2 className="text-2xl font-bold">KoinX™</h2>
+        <div className="flex gap-4 text-blue-400 text-xl">
           <a href="#" aria-label="Twitter">
             <FaXTwitter />
           </a>
@@ -32,19 +38,27 @@ const Footer = () => {
           </a>
         </div>
       </div>
-      <hr className="m-5" />
-      <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div className="border-t border-gray-700 my-6"></div>
+
+      <div className="flex lg:flex-row flex-wrap justify-between items-start gap-10 max-w-7xl mx-auto">
         <div>
-          <h3 className="font-bold text-lg">Crypto Taxes for</h3>
-          <ul className="text-sm mt-2 space-y-2">
+          <ul className="text-sm space-y-2">
             <li>Individuals and investors</li>
             <li>Tax Professionals and Accountants</li>
             <li>Exchanges and Web3 projects</li>
           </ul>
+          <div className="mt-6">
+            <img
+              src={ISOCertified}
+              alt="ISO Certified"
+              className="w-24 rounded-full"
+            />
+          </div>
         </div>
+
         <div>
-          <h3 className="font-bold text-lg">Free Tools</h3>
-          <ul className="text-sm mt-2 space-y-2">
+          <h3 className="font-bold text-lg mb-3">Free Tools</h3>
+          <ul className="text-sm space-y-2">
             <li>Crypto Prices Live</li>
             <li>Crypto Tax Calculator</li>
             <li>Crypto Tax Saving Speculator</li>
@@ -53,9 +67,10 @@ const Footer = () => {
             <li>Crypto Staking ROI Calculator</li>
           </ul>
         </div>
+
         <div>
-          <h3 className="font-bold text-lg">Resource Center</h3>
-          <ul className="text-sm mt-2 space-y-2">
+          <h3 className="font-bold text-lg mb-3">Resource Center</h3>
+          <ul className="text-sm space-y-2">
             <li>Crypto Tax Guides</li>
             <li>Dumb Ways To Lose Money</li>
             <li>Crypto Tax Savings Guide</li>
@@ -66,15 +81,16 @@ const Footer = () => {
             <li>Crypto Price Predictions</li>
           </ul>
         </div>
+
         <div>
-          <h3 className="font-bold text-lg">Company</h3>
-          <ul className="text-sm mt-2 space-y-2">
+          <h3 className="font-bold text-lg mb-3">Company</h3>
+          <ul className="text-sm space-y-2">
             <li>About Us</li>
             <li>Backed by</li>
             <li>Media and Press</li>
             <li>
               Careers{" "}
-              <span className="bg-blue-500 text-white px-2 py-1 rounded text-xs">
+              <span className="bg-blue-500 text-white px-2 py-1 rounded text-xs ml-1">
                 We're hiring
               </span>
             </li>
@@ -86,8 +102,13 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="text-center text-sm text-gray-400 mt-6">
-        © All rights reserved by Simplify Infotech Pvt. Ltd.
+
+      <div className="border-t border-gray-700 my-6"></div>
+
+      <div className="flex flex-col md:flex-row justify-center items-center max-w-7xl mx-auto gap-4">
+        <p className="text-sm text-gray-400">
+          © All rights reserved by Simplify Infotech Pvt. Ltd.
+        </p>
       </div>
     </footer>
   );

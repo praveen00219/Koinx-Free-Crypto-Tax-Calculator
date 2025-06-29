@@ -1,47 +1,109 @@
-# Free Crypto Tax Calculator for Australia
+# 🧮 Crypto Tax Calculator - Australia 🇦🇺
 
-Welcome to the Free Crypto Tax Calculator for Australia project, created as part of the KoinX frontend intern challenge! This single-page web application is designed to assist users in calculating their crypto gains, tax rates, and taxes based on their financial data. The project is built using React.js and draws inspiration from the Figma design, accessible [here](https://figmashort.link/bREHpN).
+A single-page **Crypto Tax Calculator** built with **Vite + React + Tailwind CSS**. This application calculates your **Capital Gains Tax** in Australia based on sale, purchase, and income values using the Australian tax brackets.
 
-### Crypto Tax Calculation
+The project is built using React.js and draws inspiration from the Figma design, accessible [here](https://www.figma.com/design/i3FdVKzpJartzU5r1FNkfz/KoinX-Crypto-Tax-Calculator---Assignment?node-id=0-60&t=6wuRyM37394ZKm08-0).
 
-#### User Inputs
+---
 
-Users can input the following information:
+## 📸 Screenshots
 
-- **Purchase Price:** The amount they acquired the cryptocurrency for.
-- **Sale Price:** The amount they received from selling the cryptocurrency.
-- **Expenses:** Any costs or fees associated with the cryptocurrency transaction.
-- **Investment Type:** A choice between "Long Term" and "Short Term" investments.
-- **Annual Income:** Users can select their annual income level from a dropdown menu.
+### 🖥️ Desktop View
 
-#### Calculations
+![Desktop](./public/screenshots/desktop.jpg)
 
-The application performs several crucial calculations:
+### 📱 Mobile View
 
-- **Tax Rate:** The tax rate is determined based on the user's selected "Annual Income" from the dropdown menu. The tax rate varies as the user changes their income level.
+![Mobile](./public/screenshots/mobile.jpg) |
 
-- **Capital Gains Amount:** This figure is calculated as the difference between the "Sale Price" and the "Purchase Price," after subtracting any incurred expenses(Sale Price - Purchase Price - Expenses).
+---
 
-- **Discount for Long Term Gains:** If the user selects "Long Term" as their investment type, a discount is applied, amounting to 50% of the "Capital Gains Amount," but only if the "Capital Gains Amount" is positive. In the case of a "Short Term" investment, this discount section remains hidden.
+## 📝 Task Overview
 
-- **Net Capital Gains:** For "Long Term" investments, the net capital gains are computed as the "Capital Gains Amount" minus the applied discount(Capital Gains Amount - Discount for long term gains). For "Short Term" investments, the calculation follows the formula described in the second point(Sale Price - Purchase Price - Expenses).
+This project is part of the **Frontend Interview Task for KoinX**, where the goal was to convert a Figma UI into a functional, responsive SPA that computes crypto capital gains and tax amounts according to Australia's taxation rules.
 
-- **Tax to be Paid:** The tax to be paid is determined by multiplying the tax rate by the net capital gains amount(Tax Rate \* Net Capital Gains Amount).
+---
 
-### Example Calculation
+## ✅ Functionalities Implemented
 
-Consider the following example:
+- 🎯 **Capital Gains Calculation**
 
-- Purchase Price: $50
-- Sale Price: $100
-- Expenses: $20
-- Investment Type: Long Term
-- Annual Income: ($45,001 - $120,000)
+  - `Capital Gains = Sale Price - Purchase Price - Expenses`
 
-The calculations for this scenario are as follows:
+- 🔁 **Investment Type Handling**
 
-- Tax Rate: "$5092 + 32.5% of excess over $45,000"
-- Capital Gains Amount: $30
-- Long Term Capital Gains Discount: $15
-- Net Capital Gains Amount: $15
-- Tax to be Paid: $4.875 (equivalent to 32.5% of $15)
+  - Long Term → 50% discount on capital gains
+  - Short Term → No discount, result panel changes accordingly
+
+- 💸 **Australian Tax Rate Logic**
+
+  - Tax brackets implemented using conditionals and shown dynamically
+  - Calculation based on:
+    ```js
+    Tax = BaseTax + (NetGains * TaxRate%)
+    ```
+
+- ⬇️ **Annual Income Dropdown**
+
+  - Dynamically displays correct tax bracket description
+
+- 🎨 **Responsive UI**
+
+  - Fully responsive: adjusts to mobile/tablet screens
+
+- ✅ **Form Validations & UX Enhancements**
+  - Input validations for negative numbers
+  - Real-time updates on result section
+
+---
+
+## 📦 Tech Stack & Packages
+
+- **React** (via Vite)
+- **Tailwind CSS** (Utility-first styling)
+- **react-icons** (for icons)
+
+### Folder Structure
+
+```bash
+
+├── assets/ # All images, logo
+├── components/ # All components
+├── pages/ # All page
+├── utils/ # Tax bracket logic & data
+├── App.jsx
+├── main.jsx
+└── index.css
+
+```
+
+---
+
+## 📚 Learnings
+
+- Implementing real-world **financial calculations** using JavaScript
+- Creating **conditionally rendered** UI blocks based on user input
+- Tailwind CSS for **quick prototyping** and pixel-perfect styling
+- How to structure a **scalable React project**
+- Responsive layouts using **flex/grid utilities**
+
+---
+
+## 🚀 Future Improvements
+
+- Add **multi-country support**
+- Include **FAQ section** dynamically from an array (optional task)
+- Integrate **form validation libraries** (like React Hook Form or Yup)
+- Save user data locally (using `localStorage` or `context`)
+- Add **unit tests** for calculation logic
+
+---
+
+## 🔗 Live Demo & GitHub
+
+- 🔗 **Live Site:** [View on Netlify](https://tax-calculator-koinx.netlify.app/)
+- 💻 **GitHub Repo:** [View Repository](https://github.com/praveen00219/Koinx-Free-Crypto-Tax-Calculator)
+
+---
+
+> © 2025 | Built with ❤️ by Praveen

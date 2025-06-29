@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import DesktopCard from "../components/DesktopCard";
 import MobileCard from "../components/MobileCard";
 import Footer from "../components/Footer";
+import Newsletter from "../components/Newsletter";
 
 const Home = () => {
   return (
@@ -14,11 +15,13 @@ const Home = () => {
           <CryptoTaxCalculator />
           <FAQ />
         </div>
+
         <div className="w-[95%] sm:w-full mx-auto  mt-[2.25rem] mb-[2.875rem] lg:mt-3 lg:mb-0">
           <MobileCard className="xl:hidden" />
           <DesktopCard className="hidden xl:block xl:mx-0" />
         </div>
       </div>
+      <Newsletter />
       <Footer />
     </section>
   );

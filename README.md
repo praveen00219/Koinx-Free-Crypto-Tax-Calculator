@@ -2,13 +2,6 @@
 
 Welcome to the Free Crypto Tax Calculator for Australia project, created as part of the KoinX frontend intern challenge! This single-page web application is designed to assist users in calculating their crypto gains, tax rates, and taxes based on their financial data. The project is built using React.js and draws inspiration from the Figma design, accessible [here](https://figmashort.link/bREHpN).
 
-### Screen Shot
-![Untitled design (1)](https://github.com/karthik-mohan23/Frontend-Intern-Assignment/assets/132973611/7414fccc-7efd-4742-b3a0-016e60c51ed9)
-
-
-
-
-
 ### Crypto Tax Calculation
 
 #### User Inputs
@@ -52,7 +45,3 @@ The calculations for this scenario are as follows:
 - Long Term Capital Gains Discount: $15
 - Net Capital Gains Amount: $15
 - Tax to be Paid: $4.875 (equivalent to 32.5% of $15)
-
-### Deployment
-
-The application has been deployed using the popular hosting platform Netlify, ensuring seamless accessibility for users. You can access the application by following this <a href="https://koinx-crypto-tax-calculator.netlify.app/" target="_blank">Visit the Crypto Tax Calculator</a>.
